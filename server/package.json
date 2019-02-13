@@ -1,0 +1,28 @@
+{
+  "name": "devArchiveServer",
+  "version": "1.0.0",
+  "description": "Development Archive | wLink Sharing Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Oguzhan INCE",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  },
+  "now": {
+    "name": "devArchiveServer",
+    "alias": "app1",
+    "type": "npm",
+    "engines": {
+      "node": "4.7.2"
+    },
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": "3001"
+    }
+  }
+}

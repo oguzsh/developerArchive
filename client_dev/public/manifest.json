@@ -1,0 +1,8 @@
+{
+  "short_name": "DevArchive",
+  "name": "Developer Archive",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#9f44d3",
+  "background_color": "#ffffff"
+}
