@@ -1,0 +1,17 @@
+{
+    "name": "devArchiveServer",
+    "version": "1.0.0",
+    "description": "Development Archive - Backend",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Oguzhan INCE",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.4",
+        "dotenv": "^8.1.0",
+        "express": "^4.16.2",
+        "mongoose": "^5.6.11"
+    }
+}

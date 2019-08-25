@@ -1,37 +1,31 @@
-import React, { Component } from "react";
+import React, { useState, useEffect} from "react";
+import axios from "axios"
+
+// Components
 import Posts from "./components/Posts";
-import "./css/style.css";
+import Header from "./components/Header";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      posts: []
-    };
-    this.getLinks = this.getLinks.bind(this);
-  }
+// Style
+import "./css/global.css";
 
-  //get links
-  getLinks = () => {
-    fetch("https://devarchiveserver-tydeaeuifj.now.sh/")
-      .then(res => res.json())
-      .then(res => {
-        this.setState({ posts: res.data });
-      })
-      .catch(err => console.error(err));
-  };
+const App = () => {
+    const [posts, setPosts] = useState([]);
 
-  componentDidMount() {
-    this.getLinks();
-  }
+    useEffect(() => {
+      axios.get('http://localhost:5000/')
+      .then((res) => {
+        const posts = res.data;
+        setPosts(posts);
+      }).catch(err => console.log('Error ' + err));
+    })
 
-  render() {
+
     return (
       <div className="container">
-        <Posts posts={this.state.posts} />
-      </div>
-    );
-  }
+        <Header/>
+        <Posts posts={posts}/>
+    </div>
+    )
 }
 
 export default App;
