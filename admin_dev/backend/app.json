@@ -1,25 +1,7 @@
 {
-    "name": "Developer Archive Server",
+    "name": "Developer Archive",
     "description": "Developer Archive Server",
-    "keywords": [
-        "developer",
-        "archive",
-        "server"
-    ],
-    "website": "https://dev_archive.surge.sh",
     "repository": "https://github.com/oguzsh/developerArchive",
-    "success_url": "/",
-    "scripts": {
-        "start": "node server.js"
-    },
-    "env": {
-        "SECRET_TOKEN": {
-            "description": "A secret key for verifying the integrity of signed cookies.",
-            "generator": "secret"
-        }
-    },
-    "image": "heroku/nodejs",
-    "buildpacks": [{
-        "url": "https://github.com/stomita/heroku-buildpack-nodejs"
-    }]
+    "keywords": ["node", "developer", "archive"],
+    "image": "heroku/nodejs"
 }
