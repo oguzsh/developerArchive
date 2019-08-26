@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 /* ==== MongoDB Connection ==== */
-const uri = process.env.ATLAS_URI;
+const uri = process.env.atlas_uri;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true })
 
 const connection = mongoose.connection;

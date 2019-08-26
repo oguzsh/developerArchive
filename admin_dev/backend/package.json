@@ -4,8 +4,7 @@
     "description": "Development Archive - Backend",
     "main": "server.js",
     "scripts": {
-        "start": "nodemon server.js",
-        "build": "next build"
+        "start": "node server.js"
     },
     "author": "Oguzhan INCE",
     "license": "MIT",
